@@ -2,11 +2,9 @@ tests = int(input())
 
 for t in range(1,tests+1):
     n, m = map(int, input().split())
-    bugs = []
     max_die = 0
-    #파리 갯수
-    for i in range(n):
-            bugs.append(list(map(int, input().split())))
+    #파리 갯수 2차원 배열로 입력받기
+    bugs = [list(map(int, input().split())) for _ in range(n)]
     
     #파리채
     for i in range(n-m+1):
