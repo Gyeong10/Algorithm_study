@@ -14,6 +14,7 @@ for i in range(6):
         if arr[i][1] > h:
             h = arr[i][1]
             h_idx = i
+
 #작은사각형 가로,세로 구하기
 s_w = abs(arr[(w_idx-1)%6][1] - arr[(w_idx+1)%6][1])
 s_h = abs(arr[(h_idx-1)%6][1] - arr[(h_idx+1)%6][1])
