@@ -11,6 +11,3 @@ for tc in range(1, T+1):
             cost[i] = min(cost[i], price[2]+cost[i-3])
 
     print(f'#{tc} {min(cost[12],price[3])}')
-
-
-
