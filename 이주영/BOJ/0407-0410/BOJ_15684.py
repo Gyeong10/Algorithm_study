@@ -26,7 +26,7 @@ def dfs(x, y, cnt):
     if check():
         ans = min(ans, cnt)
         return
-    # cnt가 3 이면 다음엔 4니끼 3보다 큰 값이면 값을 구하지 않기 때문에 return
+    # cnt가 3 이면 다음엔 4니까 3보다 큰 값이면 값을 구하지 않기 때문에 return
     if cnt == 3:
         return
     for i in range(x, H):
@@ -38,7 +38,7 @@ def dfs(x, y, cnt):
                 ladder[i][j] = 0
 
 
-# N: 가로선 갯수 M: 현재 사다리 연결부분 갯수 H: 세로선 갯수
+# N: 세로선 갯수 M: 현재 사다리 연결부분 갯수 H: 가로선 갯수
 N, M, H = map(int, input().split())
 ladder = [[0] * N for _ in range(H)]
 for _ in range(M):
