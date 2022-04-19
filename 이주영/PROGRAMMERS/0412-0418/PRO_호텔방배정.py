@@ -10,44 +10,25 @@
 #                 break
 #     return answer
 
-def check(visited, rooms, room):
-    t = 1
-    while True:
-        if not visited[rooms[room] + t]:
-            # rooms[room] += (t + 1)
-            break
-        t += 1
-    return t
+import sys
+sys.setrecursionlimit(10**4)
+
+def check(rooms, number):
+    if number in rooms:
+        room = check(rooms, rooms[number])
+        rooms[number] = room + 1
+        return room
+    else:
+        rooms[number] = number + 1
+        return number
 
 
 def solution(k, room_number):
     answer = []
-    rooms = [x for x in range(k+1)]
-    visited = [0] * (k+1)
-    for room in room_number:
-        # 방사용 가능
-        if not visited[room]:
-            visited[room] = 1
-            answer.append(room)
-            rooms[room] += 1
-        # 방사용 불가능 / rooms속 방 번호 > 원하는 방 번호
-        elif rooms[room] > room:
-            visited[rooms[room]] = 1
-            answer.append(rooms[room])
-            rooms[room] += check(visited, rooms, room)
-            # t = 1
-            # while True:
-            #     if not visited[rooms[room] + t]:
-            #         rooms[room] += (t + 1)
-            #         break
-            #     t += 1
-        # rooms의 방번호 < 원하는 방번호
-        elif rooms[room] < room:
-            room += check(visited, rooms, room)
-            visited[room] = 1
-            answer.append(room)
-            rooms[room] += check(visited, rooms, room)
-
+    rooms = {}
+    for number in room_number:
+        room = check(rooms, number)
+        answer.append(room)
     return answer
 
 k = 10
