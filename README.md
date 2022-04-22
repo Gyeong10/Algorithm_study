@@ -7,7 +7,8 @@
 
 
 - 현재 목표는 `BOJ 카테고리 별 문제풀이` 입니다.
-  - https://github.com/tony9402/baekjoon
+  - 참고 링크 : https://github.com/tony9402/baekjoon
+  - `이분탐색`, `분리집합(유니언 파인드)`, `동적계획법(DP)`, `투 포인터` 등 교육과정 내에서 깊게 배우지 않았지만, 코테에 나오는 카테고리를 우선적으로 풀이할 예정입니다.
 
 ![image-20220422185058375](README.assets/image-20220422185058375.png)
 
