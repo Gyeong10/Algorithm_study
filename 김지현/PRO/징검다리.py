@@ -20,9 +20,7 @@ def solution(stones, k):
         if n < mid:
             r = n
         else:
-            if l == mid:
-                return check(stones, r, k)
-            l = mid
+            l = mid + 1
     return l
 
 print(solution(stones, k))
